@@ -1,73 +1,35 @@
 {
   "questions": [
     {
-      "title": "asd",
+      "title": "What is your name?",
       "answers": [],
       "id": 1
-    },
-    {
-      "title": "what is your name",
-      "answers": [],
-      "id": 2
-    },
-    {
-      "title": "asd",
-      "answers": [],
-      "id": 3
-    },
-    {
-      "title": "jsskjjdaskjd",
-      "answers": [],
-      "id": 4
-    },
-    {
-      "title": "asdasd",
-      "answers": [],
-      "id": 5
     }
   ],
   "answers": [
     {
-      "title": "1",
-      "correct": false,
+      "title": "Rustam",
+      "correct": true,
       "questionId": "1",
       "id": 1
     },
     {
-      "title": "2",
+      "title": "Ilhom",
       "correct": false,
       "questionId": "1",
       "id": 2
     },
     {
-      "title": "3",
+      "title": "Sulaymon",
       "correct": false,
       "questionId": "1",
       "id": 3
     },
     {
-      "title": "4",
+      "title": "Faridun",
       "correct": false,
       "questionId": "1",
       "id": 4
-    },
-    {
-      "title": "5",
-      "correct": true,
-      "questionId": "1",
-      "id": 5
-    },
-    {
-      "title": "oapopop",
-      "correct": true,
-      "questionId": "2",
-      "id": 6
-    },
-    {
-      "title": "oapopopsd",
-      "correct": false,
-      "questionId": "2",
-      "id": 7
     }
   ],
   "users": [

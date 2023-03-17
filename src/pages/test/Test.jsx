@@ -4,7 +4,7 @@ import { Button, Modal, Table } from "antd";
 import React, { useEffect, useState } from "react";
 import { AxiosRequest } from "../../utils/axiosRequest";
 
-const Quizes = () => {
+const Test = () => {
   const [addModal, setAddModal] = useState(false);
   const [answerAddModal, setAnswerAddModal] = useState(false);
   const [questions, setQuistions] = useState([]);
@@ -116,7 +116,6 @@ const Quizes = () => {
   }, []);
 
   return (
-    
     <div>
       <h1 className="text-center text-3xl">Quizes</h1>
       <Divider />
@@ -191,4 +190,4 @@ const Quizes = () => {
   );
 };
 
-export default Quizes;
+export default Test;

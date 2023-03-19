@@ -32,11 +32,31 @@
       "id": 4
     }
   ],
+  
   "users": [
     {
+      "email": "john.wick@gmail.com",
+      "password": "$2a$10$QIPjYjaoKEVu7x7q0G.qmOtW6S82Rl2.N7ImVz3yxCSikvlj./VYS",
+      "id": 1
+    },
+    {
+      "email": "john.doe@gmail.com",
+      "password": "$2a$10$o1qwlwmOkkUQ8ZzRDPRAO.kihBfD1vUtOXshBTYifap8EZBSRE2Gq",
+      "id": 2
+    }
+  ],
+  "roles": [
+    {
       "id": 1,
-      "name": "John",
-      "exam": {}
+      "role": "admin"
+    },
+    {
+        "id": 2,
+        "role": "teacher"
+    },
+    {
+        "id": 3,
+        "role": "student"
     }
   ]
 }

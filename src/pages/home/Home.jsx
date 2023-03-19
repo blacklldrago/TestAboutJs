@@ -28,9 +28,8 @@ const Home = () => {
         <div className='center flex justify-center items-center pt-[100px]'>
           <div>
             <h1 className='w-[600px] text-[60px] leading-[60px] text-[white] dark:text-[black]'>{t("text2")}</h1>
-            <Link to={"/test"}>
-              <button className='text-[18px] bg-[#4fc87a] text-[white] dark:text-[black] w-[300px] h-[50px] rounded-[10px] mt-[20px] hover:text-[black]  transition-[1s] dark:hover:text-[white] transition-[1s]' >{t("text3")}</button>
-            </Link>
+            <button className='text-[18px] bg-[#4fc87a] text-[white] dark:text-[black] w-[300px] h-[50px] rounded-[10px] mt-[20px] hover:text-[black]   dark:hover:text-[white] transition-[1s]' >{t("text3")}</button>
+
           </div>
           <div>
             <img className='w-[600px]' src={lesson} alt="" />
@@ -57,9 +56,9 @@ const Home = () => {
       <div className="container">
         <div className='text-center'>
           <h1 className='pb-[20px] dark:text-[white]'>{t("text9")}</h1>
-          <Link to={"/test"}>
+          
           <button className='bg-[#4FC87A] w-[188px] h-[48px] rounded-[5px] text-[white] dark:text-[black] text-[20px] font-[600]'>{t("text10")}</button>
-          </Link>
+          
         </div>
       </div>
     </div>

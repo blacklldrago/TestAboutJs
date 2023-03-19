@@ -12,8 +12,11 @@ import PodcastsIcon from '@mui/icons-material/Podcasts';
 import logo3 from './logo3.png'
 import logo4 from './logo4.png'
 import Switcher from '../components/switcher/Switcher';
-
+import { Button } from 'antd';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 const Layout = () => {
+
     const [ lng, setLng ] = useState('ru')
   const { t, i18n } = useTranslation();
 
@@ -26,6 +29,7 @@ const Layout = () => {
     changeLanguage(value)
     setLng(value)
   }
+
   return (<div>
     <div className="containerp bg-[#4FC87A] dark:bg-[#222222]">
 
@@ -40,13 +44,21 @@ const Layout = () => {
             </div>
             </Link>
             <div className='local flex gap-[20px]'>
-                <Select className='h-[45px] mt-[15px] bg-[#4FC87A]  dark:text-[white] dark:bg-[#222222]'  variant='standard' value = {lng} onChange = {handleChange}>
-                    <MenuItem  value = "ru">Ru</MenuItem>
-                    <MenuItem  value = "en">En</MenuItem>
+            <div className='flex gap-[20px]'>
+                <Link to={"/login"}>
+
+                <Button className='bg-[#F7DF1E] font-[600] h-[35px] mt-[10px] '>
+                 Login&nbsp;<ExitToAppIcon className='dark:text-[blue]'/></Button>
+                </Link>
+                <Link to={"/register"}>
+                <Button className='bg-[#F7DF1E] font-[600] h-[35px] mt-[10px]'>Register&nbsp;<HowToRegIcon className='dark:text-[blue]'/></Button>
+                </Link>
+            <Select className='h-[35px]  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E] mt-[10px]'   value = {lng} onChange = {handleChange}>
+                    <MenuItem className='  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E]' value = "ru">Ru</MenuItem>
+                    <MenuItem className='  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E]' value = "en">En</MenuItem>
                 </Select>
-            <div>
-                <Switcher/>
             </div>
+                <Switcher/>
             </div>
         </div>
     </div>

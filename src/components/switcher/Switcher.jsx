@@ -15,7 +15,7 @@ function Switcher(){
     return (
         <>
         
-        <div className=" relative top-[20px]">
+        <div className=" relative top-[10px]">
             <DarkModeSwitch 
                 checked = {darkSide}
                 onChange = {toggleDarkMode}

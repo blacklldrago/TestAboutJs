@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/loader/Loader";
-import { Home, Layout, Test } from "./routes/Routes";
+import { Dashboard, Home, Layout, Login, Register, Test, Users} from "./routes/Routes";
 
 function App() {
   return (
@@ -24,13 +24,46 @@ function App() {
             }
           />
           <Route
-            path="test"
+            path="login"
             element={
               <Suspense fallback={<Loader />}>
-                <Test />
+                <Login />
               </Suspense>
             }
           />
+          <Route
+            path="register"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Register />
+              </Suspense>
+            }
+          />
+          <Route
+            path="dashboard"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Dashboard />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/dashboard/users"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Users/>
+              </Suspense>
+            }
+          />
+          <Route
+            path="/dashboard/test"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Test/>
+              </Suspense>
+            }
+          />
+          
         </Route>
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import { Add, Info, Send } from "@mui/icons-material";
 import { Divider, IconButton, TextField } from "@mui/material";
 import { Button, Modal, Table } from "antd";
 import React, { useEffect, useState } from "react";
-import { AxiosRequest } from "../../utils/axiosRequest";
+import { axiosRequest } from "../../utils/axiosRequest";
 
 const Test = () => {
   const [addModal, setAddModal] = useState(false);
@@ -15,7 +15,7 @@ const Test = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await AxiosRequest.post("questions", {
+      const { data } = await axiosRequest.post("questions", {
         title: e.target["title"].value,
         answers: [],
       });
@@ -30,7 +30,7 @@ const Test = () => {
       console.log(e.target["title"]);
       console.log(e.target["correct"]);
       console.log(e.target["questionId"]);
-      const { data } = await AxiosRequest.post("answers", {
+      const { data } = await axiosRequest.post("answers", {
         title: e.target["title"].value,
         correct: e.target["correct"].checked,
         questionId: e.target["questionId"].value,
@@ -42,13 +42,13 @@ const Test = () => {
 
   const getQuestions = async () => {
     try {
-      const { data } = await AxiosRequest.get("questions");
+      const { data } = await axiosRequest.get("questions");
       setQuistions(data);
     } catch (error) {}
   };
   const getAnswers = async () => {
     try {
-      const { data } = await AxiosRequest.get("answers");
+      const { data } = await axiosRequest.get("answers");
       setAnswers(data);
     } catch (error) {}
   };

@@ -44,6 +44,8 @@ export default function Register() {
   };
 
   return (
+    <div className="pb-[100px]">
+
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -136,8 +138,9 @@ export default function Register() {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        <Copyright sx={{ mt: 5}} />
       </Container>
     </ThemeProvider>
-  );
+    </div >
+    );
 }

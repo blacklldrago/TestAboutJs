@@ -48,13 +48,13 @@ const Layout = () => {
                 <Link to={"/login"}>
 
                 <Button className='bg-[#F7DF1E] font-[600] h-[35px] mt-[10px] '>
-                 Login&nbsp;<ExitToAppIcon className='dark:text-[blue]'/></Button>
+                 {t("text11")}&nbsp;<ExitToAppIcon className='dark:text-[blue]'/></Button>
                 </Link>
                 <Link to={"/register"}>
-                <Button className='bg-[#F7DF1E] font-[600] h-[35px] mt-[10px]'>Register&nbsp;<HowToRegIcon className='dark:text-[blue]'/></Button>
+                <Button className='bg-[#F7DF1E] font-[600] h-[35px] mt-[10px]'>{t("text12")}&nbsp;<HowToRegIcon className='dark:text-[blue]'/></Button>
                 </Link>
             <Select className='h-[35px]  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E] mt-[10px]'   value = {lng} onChange = {handleChange}>
-                    <MenuItem className='  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E]' value = "ru">Ru</MenuItem>
+                    <MenuItem className='  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E]' value = "ru">Ру</MenuItem>
                     <MenuItem className='  bg-[#F7DF1E]  dark:text-[black] dark:bg-[#F7DF1E]' value = "en">En</MenuItem>
                 </Select>
             </div>

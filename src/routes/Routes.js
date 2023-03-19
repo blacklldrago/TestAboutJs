@@ -7,3 +7,4 @@ export  const Register = lazy(() => import("../pages/register/Register.jsx"));
 export  const Dashboard = lazy(() => import("../pages/dashboard/Dashboard.jsx"));
 export  const Test = lazy(() => import("../pages/test/Test.jsx"));
 export  const Users = lazy(() => import("../pages/users/Users.js"));
+export  const Quize = lazy(() => import("../pages/quize/Quize.jsx"));

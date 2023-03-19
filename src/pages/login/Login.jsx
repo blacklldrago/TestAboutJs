@@ -54,6 +54,7 @@ export default function Login() {
   };
 
   return (
+    <div className="pb-[100px]">
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -126,5 +127,6 @@ export default function Login() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </div>
   );
 }

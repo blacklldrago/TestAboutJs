@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/loader/Loader";
-import { Dashboard, Home, Layout, Login, Register, Test, Users} from "./routes/Routes";
+import { Dashboard, Home, Layout, Login, Register, Test, Users, Quize} from "./routes/Routes";
 
 function App() {
   return (
@@ -60,6 +60,15 @@ function App() {
             element={
               <Suspense fallback={<Loader />}>
                 <Test/>
+              </Suspense>
+            }
+          />
+          
+          <Route
+            path="quize"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Quize/>
               </Suspense>
             }
           />

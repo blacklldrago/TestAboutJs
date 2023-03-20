@@ -1,84 +1,23 @@
-import {
-  Divider,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Toolbar,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import React from "react";
 import { Link } from "react-router-dom";
-import PlusOneIcon from "@mui/icons-material/PlusOne";
-import ListIcon from "@mui/icons-material/List";
-import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
-import PeopleIcon from "@mui/icons-material/People";
-import MuiDrawer from "@mui/material/Drawer";
-import { TextSnippet } from "@mui/icons-material";
+import QuizIcon from '@mui/icons-material/Quiz';
+import GroupIcon from '@mui/icons-material/Group';
 
-const drawerWidth = 240;
 
-const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open",
-})(({ theme, open }) => ({
-  "& .MuiDrawer-paper": {
-    position: "relative",
-    whiteSpace: "nowrap",
-    width: drawerWidth,
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    boxSizing: "border-box",
-    ...(!open && {
-      overflowX: "hidden",
-      transition: theme.transitions.create("width", {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      width: theme.spacing(7),
-      [theme.breakpoints.up("sm")]: {
-        width: theme.spacing(9),
-      },
-    }),
-  },
-}));
+function SideBar() {
+  return <div>
+    <div className="sideBar">
+      <div className="w-[300px] bg-[#7575F6] dark:bg-[yellow] text-center pt-[70px] h-[100vh] overflow-hidden">
+        <Link to={"/dashboard/test"}>
 
-function SideBar(props) {
-  const { open, toggleDrawer } = props;
-  return (
-    <Drawer variant="permanent" open={open}>
-      <Toolbar
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-          px: [1],
-        }}
-      >
-        <IconButton onClick={toggleDrawer}>
-          <ChevronLeftIcon />
-        </IconButton>
-      </Toolbar>
-      <Divider />
-      <List component="nav">
-        <ListItemButton component={Link} to="/dashboard/test">
-          <ListItemIcon>
-            <TextSnippet />
-          </ListItemIcon>
-          <ListItemText primary="Test" />
-        </ListItemButton>
-        <ListItemButton component={Link} to="/dashboard/users">
-          <ListItemIcon>
-            <PeopleIcon />
-          </ListItemIcon>
-          <ListItemText primary="Users" />
-        </ListItemButton>
-      </List>
-    </Drawer>
-  );
+        <h1 className="text-[white] dark:text-[black] text-[40px] mb-[30px]  dark:hover:bg-[#4FC87A] hover:bg-[yellow] hover:text-[black]">Test <QuizIcon sx={{fontSize:"40px"}}/></h1>
+        
+        </Link>
+        
+        <Link to={"/dashboard/users"}>
+        <h1 className="text-[white] dark:text-[black] text-[40px] dark:hover:bg-[#4FC87A] hover:bg-[yellow] hover:text-[black]">Users <GroupIcon sx={{fontSize:"40px"}}/></h1>
+        </Link>
+      </div>
+    </div>
+  </div>
 }
-
 export default SideBar;

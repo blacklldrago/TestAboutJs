@@ -1,0 +1,14 @@
+.container{
+    max-width: 1750px;
+    margin: 0 auto;
+}
+.navbar{
+    position:sticky;
+    top: 0;
+}
+.row img{
+    padding-top: 100px;
+    width: 300px;
+    margin: auto;
+    
+}

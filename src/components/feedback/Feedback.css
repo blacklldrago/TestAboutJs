@@ -1,0 +1,5 @@
+.feedback{
+    box-shadow: rgba(35, 68, 101, 0.05) 0px 4px 16px, rgba(35, 68, 101, 0.05) 0px 4px 4px;
+    padding: 16px;
+    width: 360px;
+}
